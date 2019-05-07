@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="nl">
+    <head>
+        <title>Invoer 2</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <p><input type="text" id="naam" placeholder="Wat is je naam?" ></p>
+        <p><input type="text" id="leeftijd" placeholder="Hoe oud ben je?"></p>
+        <p><button onclick="iets()">OK</button></p>
+            
+        <script>
+            function iets(){
+            var naam = document.getElementById("naam").value;
+            var leeftijd = document.getElementById("leeftijd").value;
+            
+            document.write("<p> Je naam is " + naam + "</p>");
+            document.write("<p> En je leeftijd " + leeftijd + "</p>");
+            }
+        </script>
+    </body>
+</html>
+
+

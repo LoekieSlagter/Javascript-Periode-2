@@ -1,0 +1,44 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Dobbelsteen 3</title>
+</head>
+    <p><button onclick="gooi()">Gooi</button></p>
+    <p id="uitvoer">Appels en Peren</p>
+<body>
+    
+    <script>
+        function gooi(){
+        
+        var worp = Math.floor (Math.random() * 6 + 1);
+
+        switch(worp) {
+            case 1:
+                document.getElementById("uitvoer").innerHTML = "Je gooide: één";
+                break;
+                case 2:
+                document.getElementById("uitvoer").innerHTML = "Je gooide: twee";
+                break;
+                case 3:
+                document.getElementById("uitvoer").innerHTML = "Je gooide: drie";
+                break;
+                case 4:
+                document.getElementById("uitvoer").innerHTML = "Je gooide: vier";
+                break;
+                case 5:
+                document.getElementById("uitvoer").innerHTML = "Je gooide: vijf";
+                break;
+                case 6:
+                document.getElementById("uitvoer").innerHTML = "Je gooide: zes";
+                break;
+            default:
+
+        }
+            
+        }
+
+    </script>
+    
+</body>
+</html>

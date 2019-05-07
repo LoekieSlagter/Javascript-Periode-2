@@ -1,0 +1,138 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body background= "img/kruising.png">
+
+    <form>
+        <h1>kruising1.html</h1>
+        <p>Automatisch werkend stoplicht.</p>
+        <p>Druk op de juiste knop (maar één keer drukken!)</p>
+        <input type="button" value="aanzetten" onclick="aanzetten()">
+        <input type="button" value="knipperen" onclick="knipperen()">
+        <input type="button" value="uitzetten" onclick="uitzetten()"> 
+        <input type="button" value="start" onclick="starten()">
+        <input type="button" value="stop" onclick="stop()"> 
+        <input type="button" value="opnieuw" onclick="opnieuw()">
+        <img id="auto" src="./img/autogroen.png" width="40px" height="80px">
+        <img id="auto2" src="./img/autorood3.png" width="40px" height="80px">
+        <img id="stoplicht" src="./img/stoplichtuit.png" width="20px" height="40px">   
+        <img id="stoplicht2" src="./img/stoplichtuit.png" width="20px" height="40px">
+    </form>
+ 
+       <script>
+
+        var rijden;
+        var auto = document.getElementById("auto");
+        var auto2 = document.getElementById("auto2");
+
+        auto.style.position = "absolute";
+        auto.style.left = "650px";
+        auto.style.bottom = "-80px";
+
+        auto2.style.position = "absolute";
+        auto2.style.left = "550px";
+        auto2.style.top = "-80px";
+
+        var slir_lr = true;
+
+
+        function starten(){
+            // auto.style.top = parseInt(auto.style.top) -5 + 'px';
+            rijden = setTimeout(starten, 10);
+           
+            if(parseInt(auto.style.bottom)>800){
+                auto.style.bottom='-80px'
+            }
+
+            if(parseInt(auto2.style.top)>800){
+                auto2.style.top='-80px'
+            }
+
+            if(slir_lr === false && parseInt(auto.style.bottom) === 70)
+                {snelheid = 0;}
+            else
+                {snelheid = 5;}
+
+                if(slir_lr === false && parseInt(auto2.style.top) === 280)
+                {snelheid2 = 0;}
+            else
+                {snelheid2 = 5;}
+
+            auto.style.bottom = parseInt(auto.style.bottom) + snelheid + 'px';
+            auto2.style.top = parseInt(auto2.style.top) + snelheid2 + 'px';
+ 
+        }
+
+        function stop(){
+            clearTimeout(rijden);
+        }
+
+        function opnieuw(){
+            clearTimeout(rijden);
+            auto.style.top = '800px'
+        }
+
+        var werken 
+        var buitenwerking
+        var stoplicht = document.getElementById("stoplicht");
+        var stoplicht2 = document.getElementById("stoplicht2");
+
+        stoplicht.style.position = "absolute";
+        stoplicht.style.left = "715px";
+        stoplicht.style.bottom = "100px";
+
+        stoplicht2.style.position = "absolute";
+        stoplicht2.style.left = "515px";
+        stoplicht2.style.top = "320px";
+        stoplicht2.style.transform = 'rotate(180deg)';
+
+
+        function aanzetten(){
+            clearTimeout(buitenwerking);
+            maakRood();
+            werken = setTimeout (maakGroen, 4000);
+            werken = setTimeout (maakOranje, 8000);
+            werken = setTimeout (aanzetten, 10000);
+        }
+
+        function knipperen(){
+            clearTimeout(werken);
+            maakOranje();
+            buitenwerking = setTimeout(zetUit, 500);
+            buitenwerking = setTimeout(knipperen, 1000);
+        }
+
+        function uitzetten(){
+            zetUit();
+            clearTimeout(buitenwerking);
+            clearTimeout(werken);
+        }
+
+        function maakRood(){
+            stoplicht.src = "./img/stoplichtrood.png"
+            stoplicht2.src = "./img/stoplichtrood.png"
+            slir_lr = false;
+        }
+
+        function maakOranje(){
+            stoplicht.src = "./img/stoplichtgeel.png"
+            stoplicht2.src = "./img/stoplichtgeel.png"
+        }
+
+        function maakGroen(){
+            stoplicht.src = "./img/stoplichtgroen.png"
+            stoplicht2.src = "./img/stoplichtgroen.png"
+            slir_lr = true;
+        }
+
+        function zetUit(){
+            stoplicht.src = "./img/stoplichtuit.png"
+            stoplicht2.src = "./img/stoplichtuit.png"
+        }
+    
+    </script>
+</body>
+</html>

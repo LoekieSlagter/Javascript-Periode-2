@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Selectie 2</title>
+</head>
+<body>
+   <h1>Leeftijdcontrole 2</h1> 
+    <p><input type="text" id="leeftijd" placeholder="Wat is je leeftijd"></p>
+    <p><button onclick="bereken()">OK</button> </p>
+    <p id="uitvoer">Tik je leeftijd in...</p>
+
+    <script>
+        function bereken(){
+            var leeftijd = document.getElementById("leeftijd").value;
+
+            if(leeftijd < 18)
+            {
+                document.getElementById("uitvoer").innerHTML= "Jij krijgt cola!";
+        }
+        else
+        {
+            document.getElementById("uitvoer").innerHTML= "Biertje?";
+        }
+}
+    </script>
+
+</body>
+</html>

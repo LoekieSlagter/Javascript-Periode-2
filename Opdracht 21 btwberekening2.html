@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>BTW berekening 2</title>
+<body>
+    <p><input type="text" id="artikelen" placeholder="Hoeveel artikelen zijn er?"></p>
+    <p><input type="text" id="prijs" placeholder="Wat is de prijs"></p>
+    <p><input type="text" id="BTW" placeholder="Voer uw BTW code in"></p>
+    <p><button onclick="bereken()">OK</button> </p>
+    <p id="uitvoer_aantal"></p>
+    <p id="uitvoer_prijs"></p>
+    <p id="uitvoer_btw"></p>
+    <p id="uitvoer_totaalprijsbtw"></p>
+    <p id="uitvoer_totaalprijs"></p>
+    <p id="uitvoer_btwbedrag"></p>
+
+    <script>
+       
+        function bereken(){
+
+           var artikelen = document.getElementById("artikelen").value;
+           var prijs = document.getElementById("prijs").value;
+           var BTW = document.getElementById("BTW").value;
+
+           if(BTW == 1)
+           {
+            //   document.write("U moet 0% btw betalen");
+               btwperc=0;
+           }
+
+           else if(BTW == 2)
+           {
+            //   document.write("U moet 6% btw betalen");
+               btwperc=1.06;
+           }
+
+           else 
+           {
+             //  document.write("U moet 21% btw betalen");
+               btwperc=1.21;
+           }
+
+           document.getElementById("uitvoer_aantal").innerHTML = "Er zijn " + artikelen + " artikelen";
+           document.getElementById("uitvoer_prijs").innerHTML = "De prijs is €"+ prijs;
+           document.getElementById("uitvoer_btw").innerHTML = "Btw is " + btwperc + "%";
+           document.getElementById("uitvoer_totaalprijs").innerHTML = "De totaal prijs zonder BTW is "+ artikelen*prijs;
+           document.getElementById("uitvoer_btwbedrag").innerHTML = "Het btw bedrag is " + artikelen*prijs*btwperc;
+        //    document.getElementById("uitvoer_totaalprijsbtw").innerHTML = "De totaalprijs met BTW is "+ artikelen*prijs*BTW;   
+       
+        }
+       
+    </script>
+</body>
+</html>

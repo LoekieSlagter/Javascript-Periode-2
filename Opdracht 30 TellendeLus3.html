@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Tellende Lus 3</title>
+</head>
+<body>
+    <p> <input type="text" id="getal" placeholder="Hoevaak wilt u 17 vermenigvuldigen?"></p>
+    <p><button onclick="bereken()">bereken</button> </p>
+    <p id="uitvoer"></p>
+
+    <script>
+        function bereken(){
+            
+            var tafel = 17;
+            var getal = document.getElementById("getal").value;
+
+            document.getElementById("uitvoer").innerHTML = getal + " x 17 " + " = " + tafel*getal;
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="nl">
+    <head>
+        <title>Berekening oppervlakte 3</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <p><input type="text" id="lengte" placeholder="Wat is de lengte?"></p>
+        <p><input type="text" id="breedte" placeholder="Wat is de breedte?"></p>
+        <p><button onclick="verstuur()">Ok</button></p>
+        <p id="uitvoer_lengte"></p>
+        <p id="uitvoer_breedte"></p>
+        <p id="uitvoer_opp"></p>
+        <script>
+           
+            function  verstuur (){
+            var lengte = document.getElementById("lengte").value;
+            var breedte = document.getElementById("breedte").value;
+                
+            document.getElementById("uitvoer_lengte").innerHTML= "De lengte is "+ lengte;
+            document.getElementById("uitvoer_breedte").innerHTML= "De breedte is "+ breedte;
+            
+            document.getElementById("uitvoer_opp").innerHTML= "De oppervlakte is "+ lengte*breedte;
+            }
+        </script>
+            
+        </script>
+    </body>
+</html>

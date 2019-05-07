@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="nl">
+    <head>
+        <title>Invoer 3</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <p><input type="text" id="naam" placeholder="Wat is je naam?"></p>
+        <p><input type="text" id="leeftijd" placeholder="Hoe oud ben je?"></p>
+        <p><button onclick="verstuur()">Ok</button></p>
+        <p id="uitvoer_naam"></p>
+        <p id="uitvoer_leeftijd"></p>
+        
+        <script>
+           
+            function verstuur(){
+            var naam = document.getElementById("naam").value;
+            var leeftijd = document.getElementById("leeftijd").value;
+            
+            document.getElementById("uitvoer_naam").innerHTML= "Uw naam is " + naam;
+            document.getElementById("uitvoer_leeftijd").innerHTML= "Uw leeftijd is " + leeftijd;
+            }
+            
+        </script>
+    </body>
+</html>

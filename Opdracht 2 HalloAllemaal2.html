@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="nl">
+    <head>
+        <title>Hallo Allemaal 2</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Hallo Allemaal 2</h1>
+        <p>De eerste alinea...</p>
+        <p id="uitvoer">
+            De tweede alinea, hier komt straks wat anders te staan
+        </p>
+        <p>De derde alinea...</p>
+        <script>
+        //eerste manier van uitvoer ------------------
+        alert ("Hallo Allemaal");
+            
+        // tweede manier van uitvoer -----------------
+        document.write("<p>Hoe gaat het ermee</p>");
+        document.write("<p>Ik hoop dat het goed gaat</p>");
+            
+        // derde manier van uitvoer ------------------
+        console.log("Dit is alleen voor ontwikkelaars");
+        console.log("Alleen zichtbaar in de console");
+            
+        // vierde manier van uitvoer -----------------
+        document.getElementById("uitvoer").innerHTML= "De mooiste manier van uitvoer";
+        </script>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Schildersbedrijf</title>
+</head>
+<body>
+    <p><input type="text" id="oppervlak" placeholder="Wat voor soort oppervlak is het?"></p>
+    <p><input type="text" id="lengte" placeholder="Wat is de lengte"></p>
+    <p><input type="text" id="breedte" placeholder="Wat is de breedte"></p>
+    <p><button onclick="bereken()">OK</button> </p>
+    <p id="uitvoer_oppervlak"></p>
+    <p id="uitvoer_lengte"></p>
+    <p id="uitvoer_breedte"></p>
+    <p id="uitvoer_opp"></p>
+    <p id="uitvoer_m"></p>
+    <p id="uitvoer_totaalprijs"></p>
+
+    <script>
+        function bereken(){
+            var lengte = document.getElementById("lengte").value;
+            var breedte = document.getElementById("breedte").value;
+            var oppervlak = document.getElementById("oppervlak").value;
+            var bedrag;
+
+            if(oppervlak === muur)
+            {
+                bedrag = 25;
+            }
+
+            else if(oppervlak === plafond)
+            {
+                bedrag = 40;
+            }
+
+            else if(oppervlak === vloer)
+            {
+                bedrag = 30;    
+            }
+           
+            else{
+                error
+            }
+
+            document.getElementById("uitvoer_lengte").innerHTML = "De lengte is " + lengte + " m";
+            document.getElementById("uitvoer_breedte").innerHTML = "De breedte is " + breedte + " m";
+            document.getElementById("uitvoer_opp").innerHTML = "De totale oppervlakte is " + lengte*breedte + " m";
+            document.getElementById("uitvoer_oppervlak").innerHTML = "Het oppervlak is " + oppervlak;
+            // document.getElementById("uitvoer_m").innerHTML = "De prijs per vierkante meter is " + opp;
+            document.getElementById("uitvoer_totaalprijs").innerHTML = "De totaal prijs is €" + (lengte*breedte)*bedrag;
+        }
+     </script>
+
+</body>
+</html>

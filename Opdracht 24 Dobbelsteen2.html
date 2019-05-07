@@ -1,0 +1,21 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Dobbelsteen 2</title>
+</head>
+<body>
+    <p><button onclick="Gooi()">Gooi</button></p>
+    <p id="uitvoer">Je gooide nog niets</p>    
+
+    <script>
+        function gooi()
+        {
+            var worp = Math.floor(Math.random() * 6 + 1);
+            document.getElementById("uitvoer").innerHTML = "Je gooide " + worp;
+        }
+        
+    </script>
+    
+</body>
+</html>

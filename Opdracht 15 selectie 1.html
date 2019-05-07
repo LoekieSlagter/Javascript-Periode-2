@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Selectie 1</title>
+</head>
+<body>
+    <h1>Leeftijdscontrole 0</h1>
+    <p><input type="text" id="leeftijd" placeholder="Wat is je leeftijd?"></p>
+    <p><button onclick="Bereken()">OK</button></p>
+
+    <script>
+        function Bereken()  {
+            var leeftijd = document.getElementById("leeftijd").value;
+
+            if(leeftijd<18)
+            {
+                document.write("<img src='nix18.jpg'>");
+            }
+
+            document.write("Einde van het programma.");
+            
+            }
+    </script>
+</body>
+</html>
